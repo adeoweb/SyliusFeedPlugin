@@ -188,10 +188,7 @@ final class GenerateBatchHandler implements MessageHandlerInterface
                                     $constraintViolation,
                                     $channel,
                                     $locale,
-                                    $this->serializer->serialize($context, 'json', [
-                                        JsonEncode::OPTIONS => JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRESERVE_ZERO_FRACTION | JSON_INVALID_UTF8_IGNORE,
-                                        'setono_sylius_feed_data' => true,
-                                    ]),
+                                    '',
                                 );
 
                                 if ($violation->getSeverity() === ViolationInterface::SEVERITY_ERROR) {
